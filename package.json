@@ -1,0 +1,47 @@
+{
+  "name": "lodash-mixin-safename",
+  "description": "Get a safe variable name from a given string.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/helpers/lodash-mixin-safename",
+
+  "repository": {
+  	"type": "git",
+  	"url": "https://github.com/helpers/lodash-mixin-safename.git"
+  },
+
+  "bugs": {
+  	"url": "https://github.com/helpers/lodash-mixin-safename/issues"
+  },
+
+  "license": {
+  	"type": "MIT",
+  	"url": "https://github.com/helpers/lodash-mixin-safename/blob/master/LICENSE-MIT"
+  },
+  
+  "engines": {
+  	"node": ">=0.8.0"
+  },
+
+  "main": "./index.js",
+
+  "dependencies": {
+    "lodash": "~2.4.1"
+  },
+
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.0",
+    "grunt-readme": "~0.4.0",
+    "grunt-repos": "~0.1.2",
+    "grunt-mocha-test": "~0.8.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "chai": "~1.8.1"
+  },
+  
+  "keywords": [
+  	"helper",
+  	"handlebars",
+  	"handlebars helper",
+  	"assemble"
+  ]
+}
