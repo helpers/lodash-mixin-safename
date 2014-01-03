@@ -12,7 +12,8 @@ npm i lodash-mixin-safename --save
 Use within your application with the following line of JavaScript:
 
 ```js
-var lodash_mixin_safename = require('lodash-mixin-safename');
+var _ = require('lodash');
+_.mixin(require('lodash-mixin-safename'));
 ```
 
 
@@ -20,55 +21,34 @@ var lodash_mixin_safename = require('lodash-mixin-safename');
 
 
 ## Options
-#### foo
+#### name
 Type: `String`
 Default value: `undefeined`
 
-A string value that is used to do something with whatever.
+The name to be modified
 
-#### bar
+#### patterns
 Type: `Array`
 Default value: `[]`
 
-A string value that is used to do something else with whatever else.
-
+List of patterns to be removed from the name.
 
 
 ### Usage Examples
 
-#### Example foo
-Transform a string with an object of replacement patterns
+#### Example `grunt-readme`
+"grunt-readme" => "readme"
 
 ```js
-frep.strWithObj(String, Object)
+var newName = _.safename('grunt-readme');
 ```
 
-Parameters:
-
-* `String`: The string to modify with the given replacement patterns.
-* `Object`: Object of replacement patterns, where each key is a string or a RegExp `pattern`, and each value is the `replacement` string or function to be called for each match.
-* A new string is returned with some or all matches replaced by the given replacement patterns.
-
-
-Given the following:
+#### Example `foo-bar`
+"foo-bar" => "bar"
 
 ```js
-var frep = require('frep');
-
-var str = 'ABC'
-var replacements = {
-  'A': 'AAA',
-  'B': 'BBB',
-  'C': 'CCC',
-  'D': 'DDD',
-  'E': 'EEE',
-  'F': 'FFF'
-};
-
-frep.strWithObj(str, replacements));
-// => AAABBBCCC
+var newName = _.safename('foo-bar', ['foo']);
 ```
-
 
 
 ## Contributing

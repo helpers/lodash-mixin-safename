@@ -7,7 +7,8 @@ npm i {%= name %} --save
 Use within your application with the following line of JavaScript:
 
 ```js
-var {%= safename %} = require('{%= name %}');
+var _ = require('lodash');
+_.mixin(require('{%= name %}'));
 ```
 
 
