@@ -11,14 +11,36 @@ _.mixin(require('../'));
 
 describe('lodash-mixin-safename', function() {
 
-	before(function(){
-		// run any code before tests here
-	});
+  describe('safename', function() {
+  
+    it('should remove grunt prefix', function() {
+      var expected = 'readme';
+      var actual = _.safename('grunt-readme');
+      expect(actual).to.eql(expected);
+    });
 
-  it('should do something awesome', function() {
-    var expected = 'FOO';
-    var actual = _.safename('foo');
-    expect(actual).to.eql(expected);
+    it('should remove foo prefix', function() {
+      var expected = 'bar';
+      var actual = _.safename('foo-bar', ['foo']);
+      expect(actual).to.eql(expected);
+    });
+  
+  });
+
+  describe('shortname', function() {
+  
+    it('should remove grunt prefix', function() {
+      var expected = 'readme';
+      var actual = _.safename('grunt-readme');
+      expect(actual).to.eql(expected);
+    });
+
+    it('should remove foo prefix', function() {
+      var expected = 'bar';
+      var actual = _.safename('foo-bar', ['foo']);
+      expect(actual).to.eql(expected);
+    });
+  
   });
 
 });
